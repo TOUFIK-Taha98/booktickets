@@ -65,6 +65,26 @@ class HomeScreen extends StatelessWidget {
                       Text("Search", style: Styles.headLineStyle4),
                     ],
                   ),
+                ),
+                const Gap(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headLineStyle2,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        print("You are tapped");
+                      },
+                      child: Text(
+                        "View all",
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
