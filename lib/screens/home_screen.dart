@@ -1,4 +1,5 @@
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
                 horizontal: 20), // Padding left & right
             child: Column(
               children: [
+                const Gap(40), // Gap between widgets
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,6 +47,24 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                const Gap(25),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color(0xFFF4F6FD),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        FluentSystemIcons.ic_fluent_search_regular,
+                        color: Color(0xFFBFC205),
+                      ),
+                      Text("Search", style: Styles.headLineStyle4),
+                    ],
+                  ),
                 )
               ],
             ),
