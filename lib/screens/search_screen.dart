@@ -24,25 +24,42 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(20)),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-                color: const Color(0xFFF4F6FD)),
-            child: Row(
-              children: [
-                Container(
-                  width: size.width * .44,
-                  padding: EdgeInsets.symmetric(
-                      horizontal: AppLayout.getWidth(20),
-                      vertical: AppLayout.getHeight(10)),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        AppLayout.getHeight(50),
-                      ),
-                      color: Colors.white),
-                  child: const Center(child: Text("Airline tickets")),
-                )
-              ],
+          FittedBox(
+            child: Container(
+              padding: const EdgeInsets.all(3.5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
+                  color: const Color(0xFFF4F6FD)),
+              child: Row(
+                children: [
+                  // airline tickets
+                  Container(
+                    width: size.width * .44,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getWidth(20),
+                        vertical: AppLayout.getHeight(10)),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.horizontal(
+                          left: Radius.circular(AppLayout.getHeight(50)),
+                        ),
+                        color: Colors.white),
+                    child: const Center(child: Text("Airline tickets")),
+                  ),
+                  // hotels
+                  Container(
+                    width: size.width * .44,
+                    padding: EdgeInsets.symmetric(
+                        horizontal: AppLayout.getWidth(20),
+                        vertical: AppLayout.getHeight(10)),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.horizontal(
+                          right: Radius.circular(AppLayout.getHeight(50)),
+                        ),
+                        color: Colors.transparent),
+                    child: const Center(child: Text("Hotels")),
+                  ),
+                ],
+              ),
             ),
           )
         ],
