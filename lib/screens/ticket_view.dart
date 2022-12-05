@@ -1,6 +1,5 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/widgets/thick_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -48,8 +47,8 @@ class TicketView extends StatelessWidget {
                             child: LayoutBuilder(
                               builder: (BuildContext context,
                                   BoxConstraints constraints) {
-                                print(
-                                    "The width is : ${constraints.constrainWidth()}");
+                                // print(
+                                //     "The width is : ${constraints.constrainWidth()}");
                                 return Flex(
                                   direction: Axis.horizontal,
                                   mainAxisAlignment:
