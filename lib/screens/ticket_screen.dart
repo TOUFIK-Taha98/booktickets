@@ -146,7 +146,7 @@ class TicketScreen extends StatelessWidget {
                         bottomRight: Radius.circular(21),
                         bottomLeft: Radius.circular(21))),
                 margin: const EdgeInsets.only(left: 15, right: 15),
-                padding: const EdgeInsets.only(top: 15, bottom: 15),
+                padding: const EdgeInsets.only(top: 20, bottom: 20),
                 child: Container(
                   padding:
                       EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15)),
@@ -165,13 +165,13 @@ class TicketScreen extends StatelessWidget {
                 ),
               ),
               // Last section of the screen
+              Gap(AppLayout.getHeight(20)),
               Container(
                 padding: EdgeInsets.only(
-                  left: AppLayout.getHeight(15),
+                  left: AppLayout.getHeight(20),
                 ),
                 child: TicketView(
                   ticket: ticketList[0],
-                  isColor: true,
                 ),
               ),
             ],
