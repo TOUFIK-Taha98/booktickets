@@ -163,7 +163,17 @@ class TicketScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
+              // Last section of the screen
+              Container(
+                padding: EdgeInsets.only(
+                  left: AppLayout.getHeight(15),
+                ),
+                child: TicketView(
+                  ticket: ticketList[0],
+                  isColor: true,
+                ),
+              ),
             ],
           ),
         ],
