@@ -109,6 +109,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(8)),
           Divider(color: Colors.grey.shade300),
+          Gap(AppLayout.getHeight(8)),
           // second section
           Stack(
             children: [
@@ -130,6 +131,7 @@ class ProfileScreen extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.all(AppLayout.getHeight(30)),
                   decoration: BoxDecoration(
+                    color: Colors.transparent,
                     shape: BoxShape.circle,
                     border: Border.all(
                       width: 18,
@@ -137,9 +139,53 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppLayout.getHeight(25),
+                  vertical: AppLayout.getHeight(20),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      maxRadius: 25,
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        FluentSystemIcons.ic_fluent_lightbulb_filament_filled,
+                        color: Styles.primaryColor,
+                        size: 27,
+                      ),
+                    ),
+                    Gap(AppLayout.getHeight(12)),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          'You\'ve got a new awar',
+                          style: Styles.headLineStyle2.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          'You have 95 flights in a year',
+                          style: Styles.headLineStyle2.copyWith(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
-          )
+          ),
+          Gap(AppLayout.getHeight(8)),
         ],
       ),
     );
