@@ -191,6 +191,7 @@ class ProfileScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(25)),
           Text("Accumulated miles", style: Styles.headLineStyle2),
           Gap(AppLayout.getHeight(20)),
+          // Last section
           Container(
             padding: EdgeInsets.symmetric(
               horizontal: AppLayout.getWidth(15),
@@ -298,6 +299,19 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           ),
+          Gap(AppLayout.getHeight(25)),
+          InkWell(
+            onTap: () => {},
+            child: Center(
+              child: Text(
+                "How to get more miles",
+                style: Styles.textStyle.copyWith(
+                  color: Styles.primaryColor,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
