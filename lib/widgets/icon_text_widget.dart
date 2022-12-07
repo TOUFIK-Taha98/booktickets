@@ -18,7 +18,7 @@ class AppIconText extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppLayout.getWidth(5))),
       child: Row(
         children: [
-          Icon(icon, color: Color(0xFFBFC2DF)),
+          Icon(icon, color: const Color(0xFFBFC2DF)),
           Gap(AppLayout.getWidth(10)),
           Text(text, style: Styles.textStyle)
         ],
