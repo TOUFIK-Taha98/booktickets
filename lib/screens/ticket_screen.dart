@@ -8,7 +8,6 @@ import 'package:booktickets/widgets/layout_builder_widget.dart';
 import 'package:booktickets/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:get/get.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
@@ -166,6 +165,7 @@ class TicketScreen extends StatelessWidget {
               ),
               // Last section of the screen
               Gap(AppLayout.getHeight(20)),
+              // Ticket widget reusable
               Container(
                 padding: EdgeInsets.only(
                   left: AppLayout.getHeight(20),
